@@ -12,6 +12,10 @@
 		A9D06382279CB03000537A23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D06380279CB03000537A23 /* LaunchScreen.storyboard */; };
 		BB9A074E27A1702D0094CDDB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9A074D27A1702D0094CDDB /* SearchViewController.swift */; };
 		BB9A075027A1703B0094CDDB /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB9A074F27A1703B0094CDDB /* SearchViewController.storyboard */; };
+		BB9A075427A1746D0094CDDB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9A075327A1746D0094CDDB /* SearchView.swift */; };
+		BB9A075627A174E70094CDDB /* SendSearchWordToViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9A075527A174E70094CDDB /* SendSearchWordToViewControllerProtocol.swift */; };
+		BB9A075927A175380094CDDB /* SearchViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9A075827A175380094CDDB /* SearchViewConstants.swift */; };
+		BBDEEB8B27A17BB40067985C /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEB8A27A17BB40067985C /* LocalDataManager.swift */; };
 		BD79A8F4342772A5B13F7998 /* Pods_RecipeSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C2E959A253355F7D94F2B3 /* Pods_RecipeSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +29,10 @@
 		B4C2E959A253355F7D94F2B3 /* Pods_RecipeSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9A074D27A1702D0094CDDB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BB9A074F27A1703B0094CDDB /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
+		BB9A075327A1746D0094CDDB /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		BB9A075527A174E70094CDDB /* SendSearchWordToViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendSearchWordToViewControllerProtocol.swift; sourceTree = "<group>"; };
+		BB9A075827A175380094CDDB /* SearchViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewConstants.swift; sourceTree = "<group>"; };
+		BBDEEB8A27A17BB40067985C /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
 		C509CD7F4091E1BDC90CE995 /* Pods-RecipeSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeSearch.debug.xcconfig"; path = "Target Support Files/Pods-RecipeSearch/Pods-RecipeSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +80,7 @@
 				BB9A075227A171580094CDDB /* AppSettings */,
 				BB9A074627A16F4F0094CDDB /* Moduels */,
 				BB9A074C27A16FE30094CDDB /* NetworkLayer */,
+				BBDEEB8927A17B900067985C /* LocalLayer */,
 				A9D0637E279CB03000537A23 /* Assets.xcassets */,
 				A9D06380279CB03000537A23 /* LaunchScreen.storyboard */,
 				A9D06383279CB03100537A23 /* Info.plist */,
@@ -90,6 +99,7 @@
 		BB9A074727A16F8C0094CDDB /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
+				BB9A075727A175240094CDDB /* Constants */,
 				BB9A074B27A16FD40094CDDB /* View */,
 				BB9A074A27A16FCD0094CDDB /* ViewModel */,
 				BB9A074927A16FB00094CDDB /* Pojo */,
@@ -101,6 +111,7 @@
 		BB9A074827A16F980094CDDB /* Contracts */ = {
 			isa = PBXGroup;
 			children = (
+				BB9A075527A174E70094CDDB /* SendSearchWordToViewControllerProtocol.swift */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";
@@ -139,6 +150,7 @@
 		BB9A075127A170410094CDDB /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				BB9A075327A1746D0094CDDB /* SearchView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -149,6 +161,22 @@
 				A9D06375279CB02A00537A23 /* AppDelegate.swift */,
 			);
 			path = AppSettings;
+			sourceTree = "<group>";
+		};
+		BB9A075727A175240094CDDB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BB9A075827A175380094CDDB /* SearchViewConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		BBDEEB8927A17B900067985C /* LocalLayer */ = {
+			isa = PBXGroup;
+			children = (
+				BBDEEB8A27A17BB40067985C /* LocalDataManager.swift */,
+			);
+			path = LocalLayer;
 			sourceTree = "<group>";
 		};
 		D0F6DC956AB43D06F655EE8E /* Pods */ = {
@@ -276,7 +304,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB9A074E27A1702D0094CDDB /* SearchViewController.swift in Sources */,
+				BB9A075427A1746D0094CDDB /* SearchView.swift in Sources */,
+				BB9A075927A175380094CDDB /* SearchViewConstants.swift in Sources */,
 				A9D06376279CB02A00537A23 /* AppDelegate.swift in Sources */,
+				BB9A075627A174E70094CDDB /* SendSearchWordToViewControllerProtocol.swift in Sources */,
+				BBDEEB8B27A17BB40067985C /* LocalDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

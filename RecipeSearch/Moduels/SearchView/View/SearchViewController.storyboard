@@ -16,9 +16,63 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMv-Gf-PmA" customClass="SearchView" customModule="RecipeSearch" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zB-lk-m40">
+                                        <rect key="frame" x="0.0" y="82" width="414" height="736"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZh-kx-lhp">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                        <subviews>
+                                            <searchBar contentMode="redraw" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="T4h-bE-Y6n">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                                <color key="backgroundColor" red="0.34408720529999998" green="0.70391884429999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </searchBar>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="T4h-bE-Y6n" secondAttribute="trailing" id="Bnb-bg-mjY"/>
+                                            <constraint firstItem="T4h-bE-Y6n" firstAttribute="top" secondItem="NZh-kx-lhp" secondAttribute="top" symbolic="YES" id="Icg-YM-hm0"/>
+                                            <constraint firstItem="T4h-bE-Y6n" firstAttribute="leading" secondItem="NZh-kx-lhp" secondAttribute="leading" id="Opx-OH-nrS"/>
+                                            <constraint firstItem="T4h-bE-Y6n" firstAttribute="centerX" secondItem="NZh-kx-lhp" secondAttribute="centerX" id="Vdr-ku-ehT"/>
+                                            <constraint firstItem="T4h-bE-Y6n" firstAttribute="centerY" secondItem="NZh-kx-lhp" secondAttribute="centerY" id="qbP-qx-ene"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="Kr3-gF-spb"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="NZh-kx-lhp" firstAttribute="height" secondItem="dMv-Gf-PmA" secondAttribute="height" multiplier="0.1" id="1zz-1a-qtJ"/>
+                                    <constraint firstItem="9zB-lk-m40" firstAttribute="top" secondItem="NZh-kx-lhp" secondAttribute="bottom" id="3f3-1t-o00"/>
+                                    <constraint firstItem="NZh-kx-lhp" firstAttribute="top" secondItem="Kr3-gF-spb" secondAttribute="top" id="KLg-U9-poZ"/>
+                                    <constraint firstItem="Kr3-gF-spb" firstAttribute="trailing" secondItem="9zB-lk-m40" secondAttribute="trailing" id="RbP-aE-nYO"/>
+                                    <constraint firstItem="NZh-kx-lhp" firstAttribute="trailing" secondItem="Kr3-gF-spb" secondAttribute="trailing" id="oyK-4W-fwM"/>
+                                    <constraint firstItem="NZh-kx-lhp" firstAttribute="leading" secondItem="Kr3-gF-spb" secondAttribute="leading" id="rRO-xI-2xS"/>
+                                    <constraint firstItem="9zB-lk-m40" firstAttribute="leading" secondItem="Kr3-gF-spb" secondAttribute="leading" id="rw1-5N-sc3"/>
+                                    <constraint firstItem="Kr3-gF-spb" firstAttribute="bottom" secondItem="9zB-lk-m40" secondAttribute="bottom" id="sSd-GX-Jc0"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="blurView" destination="9zB-lk-m40" id="08b-sS-fwv"/>
+                                    <outlet property="recipeSearch" destination="T4h-bE-Y6n" id="hcM-yM-g4M"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dMv-Gf-PmA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="C5z-eU-Y3L"/>
+                            <constraint firstItem="dMv-Gf-PmA" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="eaj-hL-gMY"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dMv-Gf-PmA" secondAttribute="bottom" id="g9c-8c-gpG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dMv-Gf-PmA" secondAttribute="trailing" id="um5-Px-AXq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchView" destination="dMv-Gf-PmA" id="L2y-gN-Tcj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -28,6 +82,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -11,6 +11,8 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
+    @IBOutlet weak var searchView: SearchView!
+    
     static func getSearchViewController() -> UIViewController {
         let storyBoard = UIStoryboard(name: "SearchViewController", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController ?? UIViewController()
@@ -20,7 +22,14 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchView.delegate = self
+        searchView.viewDidLoad()
+    }
+}
+
+extension SearchViewController: SendSearchWordToViewControllerProtocol {
+    func send(searchWord: String) {
         
     }
-    
 }
+
