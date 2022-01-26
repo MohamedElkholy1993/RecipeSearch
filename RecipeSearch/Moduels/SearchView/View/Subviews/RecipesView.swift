@@ -14,14 +14,9 @@ class RecipesView: UIView {
     //MARK:- Outlets
     @IBOutlet weak var recipeTableView: UITableView!
     @IBOutlet weak var emptyView: UIView!
+    @IBOutlet weak var emptyViewMessageLabel: UILabel!
     //MARK:- Vars
-    var hits = [Hit]() {
-        didSet{
-            recipeTableView.isHidden = hits.isEmpty
-            emptyView.isHidden = !hits.isEmpty
-            recipeTableView.reloadData()
-        }
-    }
+    var hits = [Hit]()
     weak var delegate: RecipesViewProtocol?
     
     func configureView(with delegate: RecipesViewProtocol) {
@@ -29,6 +24,22 @@ class RecipesView: UIView {
         recipeTableView.dataSource = self
         recipeTableView.delegate = self
         recipeTableView.register(UINib(nibName: SearchViewCellIdentifierConstants.RecipeTableViewCell.rawValue, bundle: .main), forCellReuseIdentifier: SearchViewCellIdentifierConstants.RecipeTableViewCell.rawValue)
+        emptyViewMessageLabel.text = "Use key words to start searching for recipes"
+    }
+    
+    func updateView(with hits: [Hit], resetScroll: Bool) {
+        self.hits = hits
+        recipeTableView.isHidden = hits.isEmpty
+        emptyView.isHidden = !hits.isEmpty
+        recipeTableView.reloadData()
+        
+        if resetScroll {
+            recipeTableView.performBatchUpdates(nil, completion: { [weak self] completed in
+                guard let weakSelf = self, completed else { return }
+                weakSelf.recipeTableView.setContentOffset(.zero, animated: false)
+            })
+        }
+    }
     }
 }
 

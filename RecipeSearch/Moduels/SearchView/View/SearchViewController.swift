@@ -79,9 +79,9 @@ extension SearchViewController {
         MBProgressHUD.hide(for: self.recipesView, animated: true)
     }
     
-    private func onSuccess(){
+    private func onSuccess(resetScroll: Bool){
         finishLoading()
-        recipesView.hits = searchViewModel.hits
+        recipesView.updateView(with: searchViewModel.hits, resetScroll: resetScroll)
     }
     
     private func onFail(error: String){

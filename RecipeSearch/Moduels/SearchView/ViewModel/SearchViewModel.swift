@@ -10,15 +10,11 @@ import Foundation
 
 class SearchViewModel {
 
-    var hits: [Hit] = [] {
-        didSet {
-            bindHitsToView()
-        }
-    }
+    var hits: [Hit] = []
     var nextPageUrl: String?
     var searchWord: String = ""
     var isLoading = false
-    var bindHitsToView: () -> () = {}
+    var bindHitsToView: (Bool) -> () = {_ in }
     var bindErrorToView: (String) -> () = {_ in }
    
     func setSearchWord(with search: String) {
@@ -44,8 +40,10 @@ class SearchViewModel {
             if let unwrappedError = error{
                 weakSelf.bindErrorToView(unwrappedError)
             } else if let unwrappedHits = hits {
+                let resetScroll = weakSelf.hits.isEmpty
                 weakSelf.hits += unwrappedHits
                 weakSelf.nextPageUrl = nextPageUrl
+                weakSelf.bindHitsToView(resetScroll)
             }
         }
     }
