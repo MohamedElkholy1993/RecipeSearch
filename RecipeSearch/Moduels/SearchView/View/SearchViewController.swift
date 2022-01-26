@@ -23,8 +23,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchView.delegate = self
-        searchView.viewDidLoad()
+        searchView.configueView(with: self)
         healthFilterView.configueView(with: self)
     }
 }

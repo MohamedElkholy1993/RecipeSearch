@@ -42,7 +42,8 @@ class SearchView: UIView {
     let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
     var blurEffectView: UIVisualEffectView?
     
-    func viewDidLoad() {
+    func configueView(with delegate: filterSearchProtocol?) {
+        self.delegate = delegate
         searchHistoryView.dataSource = searchHistory
         configureSearchHistoryView(with: recipeSearch)
         configureBlurView()
@@ -66,6 +67,7 @@ extension SearchView: UISearchBarDelegate{
             $0.range(of: searchText, options: .caseInsensitive) != nil
         })
         searchHistoryView.dataSource = searchHistoryFiltered
+        searchHistoryView.show()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -97,8 +99,8 @@ extension SearchView {
     
     private func configureSearchHistoryView(with searchBar: UISearchBar) {
         searchHistoryView.anchorView = searchBar
-        searchHistoryView.bottomOffset = CGPoint(x: 0, y:(searchHistoryView.anchorView?.plainView.bounds.height)!)
-        searchHistoryView.backgroundColor = .gray
+        searchHistoryView.bottomOffset = CGPoint(x: 0, y: searchHistoryView.anchorView?.plainView.bounds.height ?? 0)
+        searchHistoryView.backgroundColor = .white
         searchHistoryView.direction = .bottom
         searchHistoryView.dataSource = searchHistory
         searchHistoryView.dismissMode = .automatic
