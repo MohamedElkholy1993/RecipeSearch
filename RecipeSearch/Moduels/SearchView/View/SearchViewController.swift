@@ -36,14 +36,14 @@ class SearchViewController: UIViewController {
     }
 }
 
-extension SearchViewController: SendSearchWordToViewControllerProtocol {
+extension SearchViewController: SearchViewProtocol {
     func send(searchWord: String) {
         startLoading()
         searchViewModel.setSearchWord(with: searchWord)
     }
 }
 
-extension SearchViewController: filterSearchProtocol {
+extension SearchViewController: FilterSearchProtocol {
     func filterSearchRecipes(filters: [String]) {
         guard !searchViewModel.searchWord.isEmpty else {
             onFail(error: "No data to be filtered")

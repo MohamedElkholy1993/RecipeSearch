@@ -1,5 +1,5 @@
 //
-//  filterSearchProtocol.swift
+//  FilterSearchProtocol.swift
 //  RecipeSearch
 //
 //  Created by Mohamed Elkholy on 26/01/2022.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol filterSearchProtocol: NSObject {
+protocol FilterSearchProtocol: NSObject {
     func filterSearchRecipes(filters: [String])
 }

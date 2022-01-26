@@ -1,5 +1,5 @@
 //
-//  SendSearchWordToViewControllerProtocol.swift
+//  SearchViewProtocol.swift
 //  RecipeSearch
 //
 //  Created by Mohamed Elkholy on 26/01/2022.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol SendSearchWordToViewControllerProtocol: NSObject{
+protocol SearchViewProtocol: NSObject{
     func send(searchWord: String)
 }

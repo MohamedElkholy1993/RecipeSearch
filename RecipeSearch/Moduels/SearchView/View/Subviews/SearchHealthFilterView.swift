@@ -18,9 +18,9 @@ class SearchHealthFilterView: UIView {
     var healthFilterArray: [HealthFilters] = [.All, .LowSugar, .Keto, .Vegan]
     var arrSelectedFilters = [HealthFilters]()
     
-    weak var filterDelegate: filterSearchProtocol?
+    weak var filterDelegate: FilterSearchProtocol?
     
-    func configueView(with delegate: filterSearchProtocol?) {
+    func configueView(with delegate: FilterSearchProtocol?) {
         filterDelegate = delegate
         healthFilterCollectionView.dataSource = self
         healthFilterCollectionView.delegate = self

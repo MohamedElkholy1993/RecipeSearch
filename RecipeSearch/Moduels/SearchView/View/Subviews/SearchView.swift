@@ -28,7 +28,7 @@ class SearchView: UIView {
     }
     
     //MARK:- Vars
-    weak var delegate: SendSearchWordToViewControllerProtocol?
+    weak var delegate: SearchViewProtocol?
     var searchHistoryView = DropDown()
     var searchHistory: [String] = [] {
         didSet{
@@ -42,7 +42,7 @@ class SearchView: UIView {
     let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
     var blurEffectView: UIVisualEffectView?
     
-    func configueView(with delegate: SendSearchWordToViewControllerProtocol?) {
+    func configueView(with delegate: SearchViewProtocol?) {
         self.delegate = delegate
         searchHistoryView.dataSource = searchHistory
         configureSearchHistoryView(with: recipeSearch)
