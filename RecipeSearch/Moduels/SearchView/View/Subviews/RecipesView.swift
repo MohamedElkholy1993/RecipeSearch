@@ -40,6 +40,11 @@ class RecipesView: UIView {
             })
         }
     }
+    
+    func showErrorMessage() {
+        recipeTableView.isHidden = true
+        emptyView.isHidden = false
+        emptyViewMessageLabel.text = "No results found for your search"
     }
 }
 

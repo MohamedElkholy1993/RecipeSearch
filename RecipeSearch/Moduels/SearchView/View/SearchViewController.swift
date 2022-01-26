@@ -86,6 +86,7 @@ extension SearchViewController {
     
     private func onFail(error: String){
         finishLoading()
+        recipesView.showErrorMessage()
         let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel)
         alert.addAction(cancelButton)
