@@ -14,6 +14,7 @@ enum SearchViewConstants: String {
 
 enum SearchViewCellIdentifierConstants: String {
     case HealthFilterCollectionViewCell
+    case RecipeTableViewCell
 }
 
 enum HealthFilters: String {

@@ -42,7 +42,7 @@ class SearchView: UIView {
     let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
     var blurEffectView: UIVisualEffectView?
     
-    func configueView(with delegate: filterSearchProtocol?) {
+    func configueView(with delegate: SendSearchWordToViewControllerProtocol?) {
         self.delegate = delegate
         searchHistoryView.dataSource = searchHistory
         configureSearchHistoryView(with: recipeSearch)

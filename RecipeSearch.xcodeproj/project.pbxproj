@@ -20,6 +20,14 @@
 		BBDEEB9027A184EF0067985C /* filterSearchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEB8F27A184EF0067985C /* filterSearchProtocol.swift */; };
 		BBDEEB9327A185530067985C /* HealthFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEB9227A185530067985C /* HealthFilterCollectionViewCell.swift */; };
 		BBDEEB9527A1855B0067985C /* HealthFilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBDEEB9427A1855B0067985C /* HealthFilterCollectionViewCell.xib */; };
+		BBDEEB9727A198590067985C /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEB9627A198590067985C /* RecipesView.swift */; };
+		BBDEEB9927A19F400067985C /* JsonBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEB9827A19F400067985C /* JsonBody.swift */; };
+		BBDEEB9B27A19FE10067985C /* RecipesViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEB9A27A19FE10067985C /* RecipesViewProtocol.swift */; };
+		BBDEEB9D27A1A08A0067985C /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEB9C27A1A08A0067985C /* RecipeTableViewCell.swift */; };
+		BBDEEB9F27A1A0920067985C /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBDEEB9E27A1A0920067985C /* RecipeTableViewCell.xib */; };
+		BBDEEBA127A1A4830067985C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEBA027A1A4830067985C /* SearchViewModel.swift */; };
+		BBDEEBA327A1A4BA0067985C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEBA227A1A4BA0067985C /* NetworkManager.swift */; };
+		BBDEEBA527A1A90C0067985C /* RecipeUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEBA427A1A90C0067985C /* RecipeUrl.swift */; };
 		BD79A8F4342772A5B13F7998 /* Pods_RecipeSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C2E959A253355F7D94F2B3 /* Pods_RecipeSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +49,14 @@
 		BBDEEB8F27A184EF0067985C /* filterSearchProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterSearchProtocol.swift; sourceTree = "<group>"; };
 		BBDEEB9227A185530067985C /* HealthFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthFilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		BBDEEB9427A1855B0067985C /* HealthFilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthFilterCollectionViewCell.xib; sourceTree = "<group>"; };
+		BBDEEB9627A198590067985C /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
+		BBDEEB9827A19F400067985C /* JsonBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonBody.swift; sourceTree = "<group>"; };
+		BBDEEB9A27A19FE10067985C /* RecipesViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewProtocol.swift; sourceTree = "<group>"; };
+		BBDEEB9C27A1A08A0067985C /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		BBDEEB9E27A1A0920067985C /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
+		BBDEEBA027A1A4830067985C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		BBDEEBA227A1A4BA0067985C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BBDEEBA427A1A90C0067985C /* RecipeUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeUrl.swift; sourceTree = "<group>"; };
 		C509CD7F4091E1BDC90CE995 /* Pods-RecipeSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeSearch.debug.xcconfig"; path = "Target Support Files/Pods-RecipeSearch/Pods-RecipeSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +137,7 @@
 			children = (
 				BB9A075527A174E70094CDDB /* SendSearchWordToViewControllerProtocol.swift */,
 				BBDEEB8F27A184EF0067985C /* filterSearchProtocol.swift */,
+				BBDEEB9A27A19FE10067985C /* RecipesViewProtocol.swift */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";
@@ -128,6 +145,8 @@
 		BB9A074927A16FB00094CDDB /* Pojo */ = {
 			isa = PBXGroup;
 			children = (
+				BBDEEB9827A19F400067985C /* JsonBody.swift */,
+				BBDEEBA427A1A90C0067985C /* RecipeUrl.swift */,
 			);
 			path = Pojo;
 			sourceTree = "<group>";
@@ -135,6 +154,7 @@
 		BB9A074A27A16FCD0094CDDB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BBDEEBA027A1A4830067985C /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -153,6 +173,7 @@
 		BB9A074C27A16FE30094CDDB /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				BBDEEBA227A1A4BA0067985C /* NetworkManager.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -162,6 +183,7 @@
 			children = (
 				BB9A075327A1746D0094CDDB /* SearchView.swift */,
 				BBDEEB8D27A184BB0067985C /* SearchHealthFilterView.swift */,
+				BBDEEB9627A198590067985C /* RecipesView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -195,6 +217,8 @@
 			children = (
 				BBDEEB9227A185530067985C /* HealthFilterCollectionViewCell.swift */,
 				BBDEEB9427A1855B0067985C /* HealthFilterCollectionViewCell.xib */,
+				BBDEEB9C27A1A08A0067985C /* RecipeTableViewCell.swift */,
+				BBDEEB9E27A1A0920067985C /* RecipeTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -271,6 +295,7 @@
 				A9D06382279CB03000537A23 /* LaunchScreen.storyboard in Resources */,
 				BBDEEB9527A1855B0067985C /* HealthFilterCollectionViewCell.xib in Resources */,
 				A9D0637F279CB03000537A23 /* Assets.xcassets in Resources */,
+				BBDEEB9F27A1A0920067985C /* RecipeTableViewCell.xib in Resources */,
 				BB9A075027A1703B0094CDDB /* SearchViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,12 +352,19 @@
 				BB9A074E27A1702D0094CDDB /* SearchViewController.swift in Sources */,
 				BB9A075427A1746D0094CDDB /* SearchView.swift in Sources */,
 				BBDEEB9327A185530067985C /* HealthFilterCollectionViewCell.swift in Sources */,
+				BBDEEB9D27A1A08A0067985C /* RecipeTableViewCell.swift in Sources */,
 				BB9A075927A175380094CDDB /* SearchViewConstants.swift in Sources */,
+				BBDEEBA527A1A90C0067985C /* RecipeUrl.swift in Sources */,
+				BBDEEB9B27A19FE10067985C /* RecipesViewProtocol.swift in Sources */,
+				BBDEEB9727A198590067985C /* RecipesView.swift in Sources */,
 				BBDEEB9027A184EF0067985C /* filterSearchProtocol.swift in Sources */,
+				BBDEEBA127A1A4830067985C /* SearchViewModel.swift in Sources */,
 				A9D06376279CB02A00537A23 /* AppDelegate.swift in Sources */,
 				BB9A075627A174E70094CDDB /* SendSearchWordToViewControllerProtocol.swift in Sources */,
 				BBDEEB8E27A184BB0067985C /* SearchHealthFilterView.swift in Sources */,
+				BBDEEBA327A1A4BA0067985C /* NetworkManager.swift in Sources */,
 				BBDEEB8B27A17BB40067985C /* LocalDataManager.swift in Sources */,
+				BBDEEB9927A19F400067985C /* JsonBody.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

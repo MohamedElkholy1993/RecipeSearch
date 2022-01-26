@@ -45,6 +45,60 @@
                                     <outlet property="healthFilterCollectionView" destination="bGG-m6-A32" id="d1O-JY-Ui5"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-Jf-Oat" customClass="RecipesView" customModule="RecipeSearch" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="164" width="414" height="698"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vp-5E-TSx">
+                                        <rect key="frame" x="20" y="20" width="374" height="658"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plate" translatesAutoresizingMaskIntoConstraints="NO" id="uIv-Bl-8vh">
+                                                <rect key="frame" x="87" y="30" width="200" height="200"/>
+                                                <color key="tintColor" red="0.037240768219999998" green="0.040676200920000002" blue="0.044888399529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="Jb7-0y-v5H"/>
+                                                    <constraint firstAttribute="width" constant="200" id="PVu-59-GxS"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enter search word" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJd-pK-4PJ">
+                                                <rect key="frame" x="16" y="270" width="342" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="uIv-Bl-8vh" firstAttribute="top" secondItem="3vp-5E-TSx" secondAttribute="top" constant="30" id="4gz-e3-prc"/>
+                                            <constraint firstAttribute="trailing" secondItem="JJd-pK-4PJ" secondAttribute="trailing" constant="16" id="98D-WW-tnB"/>
+                                            <constraint firstItem="uIv-Bl-8vh" firstAttribute="centerX" secondItem="3vp-5E-TSx" secondAttribute="centerX" id="L1C-n5-r0z"/>
+                                            <constraint firstItem="JJd-pK-4PJ" firstAttribute="top" secondItem="uIv-Bl-8vh" secondAttribute="bottom" constant="40" id="V0h-i5-A5V"/>
+                                            <constraint firstItem="uIv-Bl-8vh" firstAttribute="centerX" secondItem="3vp-5E-TSx" secondAttribute="centerX" id="dk4-q0-PSZ"/>
+                                            <constraint firstItem="JJd-pK-4PJ" firstAttribute="centerX" secondItem="3vp-5E-TSx" secondAttribute="centerX" id="ip7-ox-MsE"/>
+                                            <constraint firstItem="JJd-pK-4PJ" firstAttribute="leading" secondItem="3vp-5E-TSx" secondAttribute="leading" constant="16" id="yal-Dc-PpC"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hA3-e8-lr7">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="698"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="7Rt-xG-tdn"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="hA3-e8-lr7" firstAttribute="leading" secondItem="gFc-Jf-Oat" secondAttribute="leading" id="1ba-YY-bUs"/>
+                                    <constraint firstItem="3vp-5E-TSx" firstAttribute="top" secondItem="gFc-Jf-Oat" secondAttribute="top" constant="20" symbolic="YES" id="7B1-Ba-PAm"/>
+                                    <constraint firstAttribute="bottom" secondItem="3vp-5E-TSx" secondAttribute="bottom" constant="20" symbolic="YES" id="BbF-5Z-EgY"/>
+                                    <constraint firstAttribute="trailing" secondItem="3vp-5E-TSx" secondAttribute="trailing" constant="20" symbolic="YES" id="EGu-pu-V6h"/>
+                                    <constraint firstAttribute="trailing" secondItem="hA3-e8-lr7" secondAttribute="trailing" id="YYN-oq-xhI"/>
+                                    <constraint firstItem="hA3-e8-lr7" firstAttribute="top" secondItem="gFc-Jf-Oat" secondAttribute="top" id="dEx-h4-KO6"/>
+                                    <constraint firstAttribute="bottom" secondItem="hA3-e8-lr7" secondAttribute="bottom" id="gji-Ln-gJK"/>
+                                    <constraint firstItem="3vp-5E-TSx" firstAttribute="leading" secondItem="gFc-Jf-Oat" secondAttribute="leading" constant="20" symbolic="YES" id="mQE-S7-Urc"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="emptyView" destination="3vp-5E-TSx" id="rNq-Cx-k0n"/>
+                                    <outlet property="recipeTableView" destination="hA3-e8-lr7" id="Pjo-i7-Xds"/>
+                                </connections>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zB-lk-m40" userLabel="blurView">
                                 <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -77,19 +131,24 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HHb-FK-bnx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="4Ng-lM-c8B"/>
+                            <constraint firstItem="gFc-Jf-Oat" firstAttribute="top" secondItem="HHb-FK-bnx" secondAttribute="bottom" id="4fS-Lm-evv"/>
                             <constraint firstItem="NZh-kx-lhp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ATU-fr-2XF"/>
+                            <constraint firstItem="gFc-Jf-Oat" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="F63-dY-Y0I"/>
                             <constraint firstItem="NZh-kx-lhp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Hjy-ZI-3u9"/>
                             <constraint firstItem="9zB-lk-m40" firstAttribute="top" secondItem="NZh-kx-lhp" secondAttribute="bottom" id="Jdg-It-yc1"/>
                             <constraint firstItem="HHb-FK-bnx" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Wnd-9c-xoA"/>
                             <constraint firstItem="9zB-lk-m40" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Yho-FT-w2O"/>
                             <constraint firstItem="NZh-kx-lhp" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="b59-ku-GVd"/>
                             <constraint firstItem="9zB-lk-m40" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="buK-Db-rkh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="gFc-Jf-Oat" secondAttribute="bottom" id="f2J-KU-FKr"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="9zB-lk-m40" secondAttribute="bottom" id="gaA-VD-4EZ"/>
                             <constraint firstItem="HHb-FK-bnx" firstAttribute="top" secondItem="NZh-kx-lhp" secondAttribute="bottom" id="oIz-1t-VzI"/>
+                            <constraint firstItem="gFc-Jf-Oat" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="qrb-qG-Zf7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="healthFilterView" destination="HHb-FK-bnx" id="3iJ-hq-7fF"/>
+                        <outlet property="recipesView" destination="gFc-Jf-Oat" id="9Nq-vM-rc0"/>
                         <outlet property="searchView" destination="NZh-kx-lhp" id="Fs2-Vx-nBR"/>
                     </connections>
                 </viewController>
@@ -99,6 +158,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plate" width="247" height="204"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
