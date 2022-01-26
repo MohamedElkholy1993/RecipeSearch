@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "131-1314090_jjsh-food-and-beverage-comments-black-and-white.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "131-1314090_jjsh-food-and-beverage-comments-black-and-white-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "131-1314090_jjsh-food-and-beverage-comments-black-and-white-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
