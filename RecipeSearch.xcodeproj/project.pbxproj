@@ -28,6 +28,8 @@
 		BBDEEBA127A1A4830067985C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEBA027A1A4830067985C /* SearchViewModel.swift */; };
 		BBDEEBA327A1A4BA0067985C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEBA227A1A4BA0067985C /* NetworkManager.swift */; };
 		BBDEEBA527A1A90C0067985C /* RecipeUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEBA427A1A90C0067985C /* RecipeUrl.swift */; };
+		BBDEEBA927A1B68D0067985C /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEBA827A1B68D0067985C /* RecipeDetailsViewController.swift */; };
+		BBDEEBAB27A1B6970067985C /* RecipeDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDEEBAA27A1B6960067985C /* RecipeDetailsViewController.storyboard */; };
 		BD79A8F4342772A5B13F7998 /* Pods_RecipeSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C2E959A253355F7D94F2B3 /* Pods_RecipeSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		BBDEEBA027A1A4830067985C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		BBDEEBA227A1A4BA0067985C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BBDEEBA427A1A90C0067985C /* RecipeUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeUrl.swift; sourceTree = "<group>"; };
+		BBDEEBA827A1B68D0067985C /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		BBDEEBAA27A1B6960067985C /* RecipeDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeDetailsViewController.storyboard; sourceTree = "<group>"; };
 		C509CD7F4091E1BDC90CE995 /* Pods-RecipeSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeSearch.debug.xcconfig"; path = "Target Support Files/Pods-RecipeSearch/Pods-RecipeSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				BB9A074727A16F8C0094CDDB /* SearchView */,
+				BBDEEBA627A1B6610067985C /* RecipeDetails */,
 			);
 			path = Moduels;
 			sourceTree = "<group>";
@@ -223,6 +228,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		BBDEEBA627A1B6610067985C /* RecipeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				BBDEEBA727A1B6750067985C /* View */,
+			);
+			path = RecipeDetails;
+			sourceTree = "<group>";
+		};
+		BBDEEBA727A1B6750067985C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BBDEEBA827A1B68D0067985C /* RecipeDetailsViewController.swift */,
+				BBDEEBAA27A1B6960067985C /* RecipeDetailsViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D0F6DC956AB43D06F655EE8E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +316,7 @@
 			files = (
 				A9D06382279CB03000537A23 /* LaunchScreen.storyboard in Resources */,
 				BBDEEB9527A1855B0067985C /* HealthFilterCollectionViewCell.xib in Resources */,
+				BBDEEBAB27A1B6970067985C /* RecipeDetailsViewController.storyboard in Resources */,
 				A9D0637F279CB03000537A23 /* Assets.xcassets in Resources */,
 				BBDEEB9F27A1A0920067985C /* RecipeTableViewCell.xib in Resources */,
 				BB9A075027A1703B0094CDDB /* SearchViewController.storyboard in Resources */,
@@ -363,6 +386,7 @@
 				BB9A075627A174E70094CDDB /* SearchViewProtocol.swift in Sources */,
 				BBDEEB8E27A184BB0067985C /* SearchHealthFilterView.swift in Sources */,
 				BBDEEBA327A1A4BA0067985C /* NetworkManager.swift in Sources */,
+				BBDEEBA927A1B68D0067985C /* RecipeDetailsViewController.swift in Sources */,
 				BBDEEB8B27A17BB40067985C /* LocalDataManager.swift in Sources */,
 				BBDEEB9927A19F400067985C /* JsonBody.swift in Sources */,
 			);

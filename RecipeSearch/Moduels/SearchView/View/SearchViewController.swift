@@ -63,7 +63,9 @@ extension SearchViewController: RecipesViewProtocol {
     }
     
     func showDetailsFor(recipe: Recipe) {
-        
+        let recipeDetailsVC = RecipeDetailsViewController.getRecipeDetailsViewController()
+        (recipeDetailsVC as? RecipeDetailsViewController)?.recipe = recipe
+        self.navigationController?.pushViewController(recipeDetailsVC, animated: true)
     }
 }
 

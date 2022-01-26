@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Recipe Details-->
+        <scene sceneID="pAr-Ge-el4">
+            <objects>
+                <viewController storyboardIdentifier="RecipeDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CFl-LS-QUa" customClass="RecipeDetailsViewController" customModule="RecipeSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f4a-2a-del">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recipe title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJ2-U1-CPz">
+                                <rect key="frame" x="8" y="68" width="398" height="34.5"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uLQ-IN-uj6">
+                                <rect key="frame" x="106" y="118.5" width="202" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uLQ-IN-uj6" secondAttribute="height" multiplier="1:1" id="7mC-ap-daB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ingredients" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5o-xt-uAg">
+                                <rect key="frame" x="8" y="344.5" width="398" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qda-W8-BPT">
+                                <rect key="frame" x="8" y="813" width="398" height="41"/>
+                                <color key="backgroundColor" red="0.34408720529999998" green="0.70391884429999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="25"/>
+                                <state key="normal" title="Recipe Website">
+                                    <color key="titleColor" red="0.037240768219999998" green="0.040676200920000002" blue="0.044888399529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToRecipeWebsite:" destination="CFl-LS-QUa" eventType="touchUpInside" id="955-aN-92T"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DeD-cQ-ng8">
+                                <rect key="frame" x="8" y="373" width="398" height="432"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CQs-vs-ImL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CQs-vs-ImL" firstAttribute="trailing" secondItem="DeD-cQ-ng8" secondAttribute="trailing" constant="8" id="2FT-np-jah"/>
+                            <constraint firstItem="e5o-xt-uAg" firstAttribute="top" secondItem="uLQ-IN-uj6" secondAttribute="bottom" constant="24" id="5GD-Qe-tW2"/>
+                            <constraint firstItem="qda-W8-BPT" firstAttribute="top" secondItem="DeD-cQ-ng8" secondAttribute="bottom" constant="8" id="7hh-sC-FDl"/>
+                            <constraint firstItem="uLQ-IN-uj6" firstAttribute="top" secondItem="pJ2-U1-CPz" secondAttribute="bottom" constant="16" id="8YI-EA-pxW"/>
+                            <constraint firstItem="CQs-vs-ImL" firstAttribute="bottom" secondItem="qda-W8-BPT" secondAttribute="bottom" constant="8" id="8oe-rh-sSK"/>
+                            <constraint firstItem="CQs-vs-ImL" firstAttribute="trailing" secondItem="e5o-xt-uAg" secondAttribute="trailing" constant="8" id="Byz-sB-Bcd"/>
+                            <constraint firstItem="CQs-vs-ImL" firstAttribute="trailing" secondItem="pJ2-U1-CPz" secondAttribute="trailing" constant="8" id="E0C-oS-dUa"/>
+                            <constraint firstItem="qda-W8-BPT" firstAttribute="leading" secondItem="CQs-vs-ImL" secondAttribute="leading" constant="8" id="MKM-cM-3ha"/>
+                            <constraint firstItem="uLQ-IN-uj6" firstAttribute="centerX" secondItem="f4a-2a-del" secondAttribute="centerX" id="Ode-gD-SE4"/>
+                            <constraint firstItem="CQs-vs-ImL" firstAttribute="trailing" secondItem="qda-W8-BPT" secondAttribute="trailing" constant="8" id="X8H-bS-Mbc"/>
+                            <constraint firstItem="uLQ-IN-uj6" firstAttribute="height" secondItem="f4a-2a-del" secondAttribute="height" multiplier="0.225446" id="XRU-Vz-cZD"/>
+                            <constraint firstItem="pJ2-U1-CPz" firstAttribute="centerX" secondItem="f4a-2a-del" secondAttribute="centerX" id="bOo-4Q-id6"/>
+                            <constraint firstItem="pJ2-U1-CPz" firstAttribute="leading" secondItem="CQs-vs-ImL" secondAttribute="leading" constant="8" id="e7u-84-X0d"/>
+                            <constraint firstItem="e5o-xt-uAg" firstAttribute="leading" secondItem="CQs-vs-ImL" secondAttribute="leading" constant="8" id="gN7-lS-mef"/>
+                            <constraint firstItem="pJ2-U1-CPz" firstAttribute="top" secondItem="CQs-vs-ImL" secondAttribute="top" constant="24" id="gwn-OS-Xu6"/>
+                            <constraint firstItem="DeD-cQ-ng8" firstAttribute="top" secondItem="e5o-xt-uAg" secondAttribute="bottom" constant="8" id="kem-5h-kLF"/>
+                            <constraint firstItem="DeD-cQ-ng8" firstAttribute="leading" secondItem="CQs-vs-ImL" secondAttribute="leading" constant="8" id="kvG-Se-PFU"/>
+                            <constraint firstItem="qda-W8-BPT" firstAttribute="centerX" secondItem="f4a-2a-del" secondAttribute="centerX" id="ylE-of-Urj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Recipe Details" id="7Dx-RY-gX5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="uyN-cJ-lZ4"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="indredientsText" destination="DeD-cQ-ng8" id="86h-cX-br6"/>
+                        <outlet property="ingredientsLabel" destination="e5o-xt-uAg" id="qRl-Rs-WzQ"/>
+                        <outlet property="recipeImageView" destination="uLQ-IN-uj6" id="Q4W-iO-a7Y"/>
+                        <outlet property="recipeTitleLabel" destination="pJ2-U1-CPz" id="ykB-RQ-usO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aih-yZ-Cwu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2379.7101449275365" y="34.821428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
