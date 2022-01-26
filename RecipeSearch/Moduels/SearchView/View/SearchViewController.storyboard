@@ -21,14 +21,14 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zB-lk-m40">
-                                        <rect key="frame" x="0.0" y="82" width="414" height="736"/>
+                                        <rect key="frame" x="0.0" y="60" width="414" height="758"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZh-kx-lhp">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                         <subviews>
                                             <searchBar contentMode="redraw" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="T4h-bE-Y6n">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                                 <color key="backgroundColor" red="0.34408720529999998" green="0.70391884429999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </searchBar>
@@ -37,6 +37,7 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="T4h-bE-Y6n" secondAttribute="trailing" id="Bnb-bg-mjY"/>
                                             <constraint firstItem="T4h-bE-Y6n" firstAttribute="top" secondItem="NZh-kx-lhp" secondAttribute="top" symbolic="YES" id="Icg-YM-hm0"/>
+                                            <constraint firstAttribute="height" constant="60" id="LP3-Ve-hM9"/>
                                             <constraint firstItem="T4h-bE-Y6n" firstAttribute="leading" secondItem="NZh-kx-lhp" secondAttribute="leading" id="Opx-OH-nrS"/>
                                             <constraint firstItem="T4h-bE-Y6n" firstAttribute="centerX" secondItem="NZh-kx-lhp" secondAttribute="centerX" id="Vdr-ku-ehT"/>
                                             <constraint firstItem="T4h-bE-Y6n" firstAttribute="centerY" secondItem="NZh-kx-lhp" secondAttribute="centerY" id="qbP-qx-ene"/>
@@ -46,7 +47,6 @@
                                 <viewLayoutGuide key="safeArea" id="Kr3-gF-spb"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="NZh-kx-lhp" firstAttribute="height" secondItem="dMv-Gf-PmA" secondAttribute="height" multiplier="0.1" id="1zz-1a-qtJ"/>
                                     <constraint firstItem="9zB-lk-m40" firstAttribute="top" secondItem="NZh-kx-lhp" secondAttribute="bottom" id="3f3-1t-o00"/>
                                     <constraint firstItem="NZh-kx-lhp" firstAttribute="top" secondItem="Kr3-gF-spb" secondAttribute="top" id="KLg-U9-poZ"/>
                                     <constraint firstItem="Kr3-gF-spb" firstAttribute="trailing" secondItem="9zB-lk-m40" secondAttribute="trailing" id="RbP-aE-nYO"/>
@@ -60,17 +60,49 @@
                                     <outlet property="recipeSearch" destination="T4h-bE-Y6n" id="hcM-yM-g4M"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" restorationIdentifier="SearchHealthFilterView" translatesAutoresizingMaskIntoConstraints="NO" id="HHb-FK-bnx" customClass="SearchHealthFilterView" customModule="RecipeSearch" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="104" width="414" height="60"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bGG-m6-A32">
+                                        <rect key="frame" x="0.0" y="10" width="414" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2zX-IE-vha">
+                                            <size key="itemSize" width="106" height="83"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="W9o-dd-qnN"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bGG-m6-A32" secondAttribute="trailing" id="8Kd-K7-cVr"/>
+                                    <constraint firstAttribute="bottom" secondItem="bGG-m6-A32" secondAttribute="bottom" constant="10" id="gae-PV-19K"/>
+                                    <constraint firstItem="bGG-m6-A32" firstAttribute="top" secondItem="HHb-FK-bnx" secondAttribute="top" constant="10" id="pQ0-3n-9wN"/>
+                                    <constraint firstAttribute="height" constant="60" id="s1Q-3e-K12"/>
+                                    <constraint firstItem="bGG-m6-A32" firstAttribute="leading" secondItem="HHb-FK-bnx" secondAttribute="leading" id="w3v-hP-vpu"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="healthFilterCollectionView" destination="bGG-m6-A32" id="d1O-JY-Ui5"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="HHb-FK-bnx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="4Ng-lM-c8B"/>
                             <constraint firstItem="dMv-Gf-PmA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="C5z-eU-Y3L"/>
+                            <constraint firstItem="HHb-FK-bnx" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Wnd-9c-xoA"/>
                             <constraint firstItem="dMv-Gf-PmA" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="eaj-hL-gMY"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dMv-Gf-PmA" secondAttribute="bottom" id="g9c-8c-gpG"/>
+                            <constraint firstItem="HHb-FK-bnx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="oIz-1t-VzI"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dMv-Gf-PmA" secondAttribute="trailing" id="um5-Px-AXq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="healthFilterView" destination="HHb-FK-bnx" id="3iJ-hq-7fF"/>
                         <outlet property="searchView" destination="dMv-Gf-PmA" id="L2y-gN-Tcj"/>
                     </connections>
                 </viewController>

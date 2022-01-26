@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="HealthFilterCollectionViewCell" reuseIdentifier="HealthFilterCollectionViewCell" id="e2F-Vu-1oP" customClass="HealthFilterCollectionViewCell" customModule="RecipeSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="106" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="co0-er-dAd">
+                <rect key="frame" x="0.0" y="0.0" width="106" height="83"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ci-bm-x7b">
+                        <rect key="frame" x="4" y="31" width="98" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1ci-bm-x7b" firstAttribute="centerY" secondItem="co0-er-dAd" secondAttribute="centerY" id="8k2-mA-Y8T"/>
+                    <constraint firstItem="1ci-bm-x7b" firstAttribute="leading" secondItem="co0-er-dAd" secondAttribute="leading" constant="4" id="ivp-dJ-x95"/>
+                    <constraint firstItem="1ci-bm-x7b" firstAttribute="centerX" secondItem="co0-er-dAd" secondAttribute="centerX" id="lol-Hf-qSs"/>
+                    <constraint firstAttribute="trailing" secondItem="1ci-bm-x7b" secondAttribute="trailing" constant="4" id="pas-Dv-0Ry"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="106" height="83"/>
+            <connections>
+                <outlet property="filterTitleLabel" destination="1ci-bm-x7b" id="iSA-0a-YNR"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="88"/>
+        </collectionViewCell>
+    </objects>
+</document>

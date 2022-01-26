@@ -12,6 +12,7 @@ import UIKit
 class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchView: SearchView!
+    @IBOutlet weak var healthFilterView: SearchHealthFilterView!
     
     static func getSearchViewController() -> UIViewController {
         let storyBoard = UIStoryboard(name: "SearchViewController", bundle: nil)
@@ -24,11 +25,18 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         searchView.delegate = self
         searchView.viewDidLoad()
+        healthFilterView.configueView(with: self)
     }
 }
 
 extension SearchViewController: SendSearchWordToViewControllerProtocol {
     func send(searchWord: String) {
+        
+    }
+}
+
+extension SearchViewController: filterSearchProtocol {
+    func filterSearchRecipes(filters: [String]) {
         
     }
 }

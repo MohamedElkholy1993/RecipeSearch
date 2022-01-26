@@ -16,6 +16,10 @@
 		BB9A075627A174E70094CDDB /* SendSearchWordToViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9A075527A174E70094CDDB /* SendSearchWordToViewControllerProtocol.swift */; };
 		BB9A075927A175380094CDDB /* SearchViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9A075827A175380094CDDB /* SearchViewConstants.swift */; };
 		BBDEEB8B27A17BB40067985C /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEB8A27A17BB40067985C /* LocalDataManager.swift */; };
+		BBDEEB8E27A184BB0067985C /* SearchHealthFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEB8D27A184BB0067985C /* SearchHealthFilterView.swift */; };
+		BBDEEB9027A184EF0067985C /* filterSearchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEB8F27A184EF0067985C /* filterSearchProtocol.swift */; };
+		BBDEEB9327A185530067985C /* HealthFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDEEB9227A185530067985C /* HealthFilterCollectionViewCell.swift */; };
+		BBDEEB9527A1855B0067985C /* HealthFilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBDEEB9427A1855B0067985C /* HealthFilterCollectionViewCell.xib */; };
 		BD79A8F4342772A5B13F7998 /* Pods_RecipeSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C2E959A253355F7D94F2B3 /* Pods_RecipeSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,10 @@
 		BB9A075527A174E70094CDDB /* SendSearchWordToViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendSearchWordToViewControllerProtocol.swift; sourceTree = "<group>"; };
 		BB9A075827A175380094CDDB /* SearchViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewConstants.swift; sourceTree = "<group>"; };
 		BBDEEB8A27A17BB40067985C /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
+		BBDEEB8D27A184BB0067985C /* SearchHealthFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHealthFilterView.swift; sourceTree = "<group>"; };
+		BBDEEB8F27A184EF0067985C /* filterSearchProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterSearchProtocol.swift; sourceTree = "<group>"; };
+		BBDEEB9227A185530067985C /* HealthFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		BBDEEB9427A1855B0067985C /* HealthFilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthFilterCollectionViewCell.xib; sourceTree = "<group>"; };
 		C509CD7F4091E1BDC90CE995 /* Pods-RecipeSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeSearch.debug.xcconfig"; path = "Target Support Files/Pods-RecipeSearch/Pods-RecipeSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				BB9A075527A174E70094CDDB /* SendSearchWordToViewControllerProtocol.swift */,
+				BBDEEB8F27A184EF0067985C /* filterSearchProtocol.swift */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";
@@ -133,6 +142,7 @@
 		BB9A074B27A16FD40094CDDB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BBDEEB9127A1853F0067985C /* Cells */,
 				BB9A075127A170410094CDDB /* Subviews */,
 				BB9A074D27A1702D0094CDDB /* SearchViewController.swift */,
 				BB9A074F27A1703B0094CDDB /* SearchViewController.storyboard */,
@@ -151,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				BB9A075327A1746D0094CDDB /* SearchView.swift */,
+				BBDEEB8D27A184BB0067985C /* SearchHealthFilterView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -177,6 +188,15 @@
 				BBDEEB8A27A17BB40067985C /* LocalDataManager.swift */,
 			);
 			path = LocalLayer;
+			sourceTree = "<group>";
+		};
+		BBDEEB9127A1853F0067985C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BBDEEB9227A185530067985C /* HealthFilterCollectionViewCell.swift */,
+				BBDEEB9427A1855B0067985C /* HealthFilterCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D0F6DC956AB43D06F655EE8E /* Pods */ = {
@@ -249,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9D06382279CB03000537A23 /* LaunchScreen.storyboard in Resources */,
+				BBDEEB9527A1855B0067985C /* HealthFilterCollectionViewCell.xib in Resources */,
 				A9D0637F279CB03000537A23 /* Assets.xcassets in Resources */,
 				BB9A075027A1703B0094CDDB /* SearchViewController.storyboard in Resources */,
 			);
@@ -305,9 +326,12 @@
 			files = (
 				BB9A074E27A1702D0094CDDB /* SearchViewController.swift in Sources */,
 				BB9A075427A1746D0094CDDB /* SearchView.swift in Sources */,
+				BBDEEB9327A185530067985C /* HealthFilterCollectionViewCell.swift in Sources */,
 				BB9A075927A175380094CDDB /* SearchViewConstants.swift in Sources */,
+				BBDEEB9027A184EF0067985C /* filterSearchProtocol.swift in Sources */,
 				A9D06376279CB02A00537A23 /* AppDelegate.swift in Sources */,
 				BB9A075627A174E70094CDDB /* SendSearchWordToViewControllerProtocol.swift in Sources */,
+				BBDEEB8E27A184BB0067985C /* SearchHealthFilterView.swift in Sources */,
 				BBDEEB8B27A17BB40067985C /* LocalDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
